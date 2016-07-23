@@ -29,7 +29,7 @@ class AutoEncoder(object):
 
     def learn(self, X, testX):
         with self.model.net.graph.as_default():
-            self.model.fit(X, X, n_epoch=10, validation_set=(testX, testX),
+            self.model.fit(X, X, n_epoch=20, validation_set=(testX, testX),
                            run_id=repr(self), batch_size=256)
 
     def __repr__(self):
